@@ -365,7 +365,22 @@ Flight::route('GET /korisnik.json', function() {
 			return false;
 		}
 	});
+	Flight::route('GET /member.json', function() {
+		header("Content-Type: application/json; charset=utf-8");
+		$db = Flight::db();
 
+			$data_json = Flight::get("json_data");
+			$data = json_decode($data_json);
+			$db->select(" member ", ' * ', null, null, null, null, null);
+			$niz = array();
+			while($red = $db->getResult()->fetch_object()) {
+				$niz[] = $red;
+			}
+			$json_niz = json_encode($niz,JSON_UNESCAPED_UNICODE);
+			echo '{'.'"member":'. indent($json_niz) .'}';
+			return false;
+			
+	});
 	Flight::route('GET /lokacije.json', function(){
 		header("Content-Type: application/json; charset=utf-8");
 

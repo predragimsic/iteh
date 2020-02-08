@@ -88,7 +88,7 @@
                                 minlength: "At least 2 characters!",
                                 maxlength: "Maximum 20 characters!"
                             },
-                            prezime: {
+                            lastname: {
                                 required: "Required!",
                                 minlength: "At least 2 characters!",
                                 maxlength: "Maximum 50 characters!"

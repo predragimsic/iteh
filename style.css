@@ -1,0 +1,176 @@
+
+.glyphicon glyphicon-log-in
+{
+font-size: 50px;
+color:#000;
+}
+
+
+
+.carousel-inner > .item > img
+{
+    margin: 0 auto;
+}
+
+
+#carousel-example-generic
+{
+  background-image: linear-gradient(-225deg, #7DE2FC 0%, #B9B6E5 100%)!important;
+}
+
+#share-buttons img
+{
+width: 35px;
+padding: 5px;
+border: 0;
+box-shadow: 0;
+display: inline;
+}
+
+#map-canvas
+{  height:600px;
+   width: 100%;
+   margin-top: 20px;
+   margin-bottom:0px;
+   margin-left: 20px;
+ }
+
+.sidebar_text2
+{
+ color:  #fff;
+ font-size:12pt;
+ text-align: center;
+}
+
+.datagrid
+{
+	background: #fff;
+	overflow: visible;
+	max-height: 350px;
+  overflow-y: scroll;
+}
+
+.datagrid table
+{
+  width: 100%;
+	border-collapse:separate;
+	text-align: center;
+}
+
+.datagrid table td, .datagrid table th
+{
+	padding: 10px;
+}
+
+.datagrid table thead th
+{
+	background: #595959;
+color: #ffffff;;
+	font-size: 15px;
+	font-weight: bold;
+  text-align: center;
+	border-right: 1px solid #bfbfbf;
+  border-bottom: 1px solid #bfbfbf;
+}
+
+.datagrid table tbody td
+{
+	color: #404040;
+	border-right: 1px solid #bfbfbf;
+  border-bottom: 1px solid #bfbfbf;
+	font-size: 12px;
+}
+
+#content55
+{
+  margin: 0 auto;
+	padding: 30px 0 0 15px;
+	width: 930px;
+	height: 100%;
+	clear: both;
+	overflow: hidden;
+}
+
+#post55
+{
+	float: left;
+	width: 600px;
+	margin-bottom: 15px;
+}
+
+#post55 .post
+{
+	width: 600px;
+	padding: 0 0 10px 0;
+	margin-bottom: 30px;
+}
+
+ 
+.cta-inner {
+	text-align: center;
+  position: relative;
+  padding: 3rem;
+  margin: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.85);
+}
+
+.cta-inner:before {
+  border-radius: 0.5rem;
+  content: '';
+  position: absolute;
+  top: -0.5rem;
+  bottom: -0.5rem;
+  left: -0.5rem;
+  right: -0.5rem;
+  border: 0.25rem solid rgba(255, 255, 255, 0.85);
+}
+
+
+#DataTables_Table_0_length, #DataTables_Table_0_info {
+  margin-left: 150px;
+}
+#DataTables_Table_0_filter , #DataTables_Table_0_paginate{
+  margin-right: 150px;
+}
+
+.sidebar_text, h4, p, .text-right, summary , .post_title, h2{
+  color: #ffffff;
+}
+.address , .section-heading-lower, .mb-0{
+  color: #000;
+}
+
+
+.slideshow {
+  height: 150px;
+}
+
+.slideshow .wrapper {
+  width: 100%;
+  height: 150px;
+  margin-top: 10px;
+}
+.slideshow .slide {
+  border: solid 4px #fff;
+  cursor: pointer;
+}
+
+.slideshow .slide img {
+  vertical-align: top;
+  width: 100px;
+}
+
+.slideshow .slide.currentSlide {
+  border-color: #ccc;
+}
+
+.slideshow .fullsize {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .slideshow {
+    width: 50%;
+  }
+}
+

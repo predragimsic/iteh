@@ -22,7 +22,7 @@
 
       <div class="pull-right">
         <form class="form-inline" method="post" action="search.php">
-          <input type="text" name="search" class="form-control" id="span5" placeholder="Search">
+          <input type="text" name="search" class="form-control" id="span5" placeholder="Search" autocomplete="off">
         </form>
       </div>
 
