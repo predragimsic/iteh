@@ -27,7 +27,7 @@ if ($count > 0) {
 ?>
 
 /*
-$urlZaSB = 'http://localhost/projekat/login.json';
+$urlZaSB = 'http://localhost:8080/socialnetwork/login.json';
                   $curlZaSB = curl_init($urlZaSB);
                   curl_setopt($curlZaSB, CURLOPT_RETURNTRANSFER, true);
                   curl_setopt($curlZaSB, CURLOPT_HTTPHEADER, array('Accept: application/json','Content-Type: application/json'));
@@ -53,5 +53,5 @@ if (!$odgovorOdServisa.is_null()) {
     }
 } else {
     header('location:index.php');
-}
-?>*/
+}*/
+?>

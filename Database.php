@@ -4,7 +4,7 @@ class Database
     private $hostname = "localhost";
     private $username = "root";
     private $password = "";
-    private $dbname;
+    private $dbname = "socialdb";
     private $dblink;   // Connection with database
     private $result;   // resut of sql querry
     private $records;  // total number of returned records

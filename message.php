@@ -31,6 +31,7 @@
                                             <select name="friend_id" class="combo" required>
 											<option></option>
 															<?php
+															
 														$query = $conn->query("select members.member_id , members.firstname , members.lastname , members.image , friends.friends_id   from members  , friends
 	where friends.my_friend_id = '$session_id' and members.member_id = friends.my_id
 	OR friends.my_id = '$session_id' and members.member_id = friends.my_friend_id
@@ -39,7 +40,23 @@
 															$friend_name = $row['firstname']." ".$row['lastname'];
 															$friend_image = $row['image'];
 															$id = $row['member_id'];
+															/*
+															$url = 'http://localhost:8080/socialnetwork/friend.json';
+															$curl = curl_init($url);
+															curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+															curl_setopt($curl, CURLOPT_HTTPHEADER, array('Accept: application/json','Content-Type: application/json'));
+															curl_setopt($curl, CURLOPT_HTTPGET, true);
+													
+															$curl_odgovor = curl_exec($curl);
+															curl_close($curl);
+															$json_objekat = json_decode($curl_odgovor);
+															foreach($json_objekat->friend as $friend) {
+																$friend_name = $friend->firstname." ".$friend->lastname;
+																$id = $friend->member_id;
+															*/
+															
 															?>
+
                                               	<option value="<?php echo $id; ?>"><?php echo $friend_name; ?></option>
 											<?php } ?>
                                             </select>
@@ -67,11 +84,25 @@
              	Inbox
 				<hr>
 				<?php 
+				
 				$query = $conn->query("select * from message
 				LEFT JOIN members on message.sender_id = members.member_id where reciever_id = '$session_id' ");
 				while($row = $query->fetch()){
 				$id = $row['message_id'];
-				
+				/*
+				$url = 'http://localhost:8080/socialnetwork/message.json';
+				$curl = curl_init($url);
+				curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+				curl_setopt($curl, CURLOPT_HTTPHEADER, array('Accept: application/json','Content-Type: application/json'));
+				curl_setopt($curl, CURLOPT_HTTPGET, true);
+		
+				$curl_odgovor = curl_exec($curl);
+				curl_close($curl);
+				$json_objekat = json_decode($curl_odgovor);
+				foreach($json_objekat->message as $message) {
+					$message_id = $message->message_id;
+					
+*/
 				?>
 				<div class="mes">
 				<div class="message"><?php echo $row['content']; ?>

@@ -42,7 +42,11 @@
  
 		move_uploaded_file($_FILES["image"]["tmp_name"], "images/" . $_FILES["image"]["name"]);
 		$location = "images/" . $_FILES["image"]["name"];
+		$member_id = $session_id;
+		
 		$conn->query("update members set image = '$location' where member_id  = '$session_id' ");
+		/*
+		include("update_profile_photo.php");*/
 	?>
 	<script>
 		window.location = 'home.php';

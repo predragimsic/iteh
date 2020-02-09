@@ -45,9 +45,9 @@
 								<input type="hidden" name="my_friend_id" value="<?php echo $friend_id; ?>">
 		<?php $query1 = $conn->query("select * from friends where my_friend_id = '$friend_id'");
 			  $count1 = $query1->rowcount();
-			  if ($count1 > 0){ echo 'All Ready Friend'; }else{
+			  if ($count1 > 0){ echo 'Already friend'; }else{
 		?>	
-								<button  class="btn btn-info"><i class="icon-plus-sign"></i> Add as Friend</button>
+								<button  class="btn btn-info"><i class="icon-plus-sign"></i> Add </button>
 			<?php } ?>
 								</div>
                   </h4></div>

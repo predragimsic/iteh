@@ -10,8 +10,13 @@
     <link href="css/font-awesome.css" type="text/css" rel="stylesheet">
     <link href="css/my_style.css" type="text/css" rel="stylesheet">
     <script src="js/jquery-3.3.1.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="DataTables-1.10.20/css/jquery.dataTables.min.css" />
-    <script src="DataTables-1.10.20/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="css/tabele.css">
+    <script src="js/tabele.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#zakazivanja').DataTable();
+        });
+    </script>
 
     <script type="text/javascript">
         // kada je dokument učitan
@@ -42,11 +47,6 @@
 
         });
     </script>
-    <script>
-        $(document).ready(function() {
-            $(".tabela").DataTable();
-        });
-    </script>
+  
 
 </head>
-<?php include('dbcon.php'); ?>

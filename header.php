@@ -10,6 +10,31 @@
     <link href="css/font-awesome.css" type="text/css" rel="stylesheet">
     <link href="css/my_style.css" type="text/css" rel="stylesheet">
     
-    
+    <script type="text/javascript">
+        // kada je dokument učitan
+        $(document).ready(function () {
+            // selektujemo element čiji ID je txt, proveravamo kada je sklonjen fokus sa njega (bilo kojim tasterom)
+            $("#txt").keyup(function () {
+                var vrednost = $("#txt").val();
+                $.get(
+                    "pretragaAJAX.php",
+                    {
+                        unos: vrednost
+                    },
+                    function (data) {
+                        $("#livesearch").show();
+                        $("#livesearch").html(data);
+                    });
+            });
+        });
+
+        // funkcija koja postavlja ime aranžmana u polje za pretragu
+        function place(element) {
+            // postavljamo pronađenu vrednost u polje za pretragu
+            $("#txt").val(element.innerHTML);
+            // kada je odabrana vrednost, sakrivamo listu rezultata
+            $("#livesearch").hide();
+        }
+    </script>
 </head>
 <?php include('dbcon.php'); ?>

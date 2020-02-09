@@ -33,12 +33,12 @@
             <option>Male</option>
         </select>
     </p>
-    <div id="zameniSuccess">
+    <div id="choose">
     <h3>Password recommendations</h3>
 
-    <input type="button" onclick="punipass(this)" class="dugmeAliNe" id="lozinka1" value=""> <br>
-    <input type="button" onclick="punipass(this)" class="dugmeAliNe" id="lozinka2" value=""> <br>
-    <input type="button" onclick="punipass(this)" class="dugmeAliNe" id="lozinka3" value=""> <br>
+    <input type="button" onclick="fillIn(this)" class="dugmeAliNe" id="pass1" value=""> <br>
+    <input type="button" onclick="fillIn(this)" class="dugmeAliNe" id="pass2" value=""> <br>
+    <input type="button" onclick="fillIn(this)" class="dugmeAliNe" id="pass3" value=""> <br>
 
 
 </div>
@@ -53,14 +53,14 @@
 
 
 <script>
-    function punipass(d) {
+    function fillIn(d) {
 
         document.getElementById("password").value = d.value;
-        document.getElementById("zameniSuccess").innerHTML = " <img src=\"images/gif.gif\" alt=\"\">";
+        document.getElementById("choose").innerHTML = " <img src=\"images/gif.gif\" alt=\"\">";
 
         $(document).ready(function() {
             setTimeout(function() {
-                $('#zameniSuccess').hide();
+                $('#choose').hide();
             }, 4000);
         });
 
@@ -68,7 +68,7 @@
 </script>
 <script>
     var zahtev = $.ajax({
-        url: "lozinke.php",
+        url: "passwords.php",
         method: "GET"
     });
 
@@ -77,9 +77,9 @@
         var niz = nalepi.split("\n");
 
 
-        document.getElementById("lozinka1").value = niz[0];
-        document.getElementById("lozinka2").value = niz[1];
-        document.getElementById("lozinka3").value = niz[2];
+        document.getElementById("pass1").value = niz[0];
+        document.getElementById("pass2").value = niz[1];
+        document.getElementById("pass3").value = niz[2];
 
 
     });
